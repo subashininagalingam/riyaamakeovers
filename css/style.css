@@ -173,7 +173,9 @@ color:#ddd;
 
 display:flex;
 
-gap:35px;
+align-items: center;
+
+gap:18px;
 
 }
 

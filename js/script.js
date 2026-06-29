@@ -2,10 +2,12 @@
 AOS Animation
 ==============================*/
 
-AOS.init({
-    duration:1000,
-    once:true
-});
+if (typeof AOS !== "undefined") {
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+}
 
 /*==============================
 Mobile Menu
@@ -47,6 +49,7 @@ document.querySelectorAll(".nav-menu a").forEach(link=>{
 });
 
 
+
 /*==============================
 Sticky Navbar
 ==============================*/
@@ -78,35 +81,20 @@ window.addEventListener("scroll",()=>{
 Scroll To Top
 ==============================*/
 
-const scrollBtn=document.querySelector(".scroll-top");
+const scrollBtn = document.querySelector(".scroll-top");
 
-window.addEventListener("scroll",()=>{
-
-    if(window.scrollY>500){
-
-        scrollBtn.style.display="flex";
-
-    }
-
-    else{
-
-        scrollBtn.style.display="none";
-
-    }
-
-});
-
-scrollBtn.onclick=()=>{
-
-    window.scrollTo({
-
-        top:0,
-
-        behavior:"smooth"
-
+if (scrollBtn) {
+    window.addEventListener("scroll", () => {
+        scrollBtn.style.display = window.scrollY > 500 ? "flex" : "none";
     });
 
-};
+    scrollBtn.onclick = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    };
+}
 
 
 /*==============================
@@ -140,63 +128,58 @@ behavior:"smooth"
 Counter Animation
 ==============================*/
 
-const counters=document.querySelectorAll(".stat-box h2");
+/*==============================
+Counter Animation
+==============================*/
 
-let started=false;
+const counters = document.querySelectorAll(".stat-box h2");
+let started = false;
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
 
-const section=document.querySelector(".stats");
+    const section = document.querySelector(".stats");
+    if (!section || started) return;
 
-if(!section) return;
+    const position = section.offsetTop - 500;
 
-const position=section.offsetTop-500;
+    if (window.scrollY > position) {
 
-if(window.scrollY>position && !started){
+        started = true;
 
-started=true;
+        counters.forEach(counter => {
 
-counters.forEach(counter=>{
+            const text = counter.innerText.trim();
 
-const target=parseInt(counter.innerText);
+            const isPercent = text.includes("%");
+            const target = parseInt(text.replace(/\D/g, ""));
 
-let count=0;
+            let count = 0;
 
-const speed=Math.max(20,Math.floor(target/80));
+            const speed = Math.max(1, Math.ceil(target / 80));
 
-const update=()=>{
+            function update() {
 
-count+=speed;
+                count += speed;
 
-if(count<target){
+                if (count < target) {
 
-counter.innerText=count+"+";
+                    counter.innerText = isPercent
+                        ? count + "%"
+                        : count + "+";
 
-requestAnimationFrame(update);
+                    requestAnimationFrame(update);
 
-}
+                } else {
 
-else{
+                    counter.innerText = text;
+                }
+            }
 
-if(counter.innerText.includes("%")){
+            update();
 
-counter.innerText="100%";
+        });
 
-}else{
-
-counter.innerText=target+"+";
-
-}
-
-}
-
-}
-
-update();
-
-});
-
-}
+    }
 
 });
 
@@ -391,13 +374,3 @@ document.getElementById("bookingForm").addEventListener("submit", function(e){
 
 });
 
-const menuBtn = document.querySelector(".menu-btn");
-const navMenu = document.querySelector(".nav-menu");
-
-menuBtn.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-
-    menuBtn.innerHTML = navMenu.classList.contains("active")
-        ? '<i class="fa-solid fa-xmark"></i>'
-        : '<i class="fa-solid fa-bars"></i>';
-});
