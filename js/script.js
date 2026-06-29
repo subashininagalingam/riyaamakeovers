@@ -374,3 +374,43 @@ document.getElementById("bookingForm").addEventListener("submit", function(e){
 
 });
 
+// Testimonial
+
+const grid = document.querySelector(".testimonial-grid");
+
+if (grid) {
+
+    const cards = Array.from(document.querySelectorAll(".testimonial-card"));
+
+    // Clone first 3 cards
+    cards.slice(0, 3).forEach(card => {
+        grid.appendChild(card.cloneNode(true));
+    });
+
+    let index = 0;
+    const gap = 25;
+
+    function slideTestimonials() {
+
+        const width = cards[0].offsetWidth + gap;
+
+        index++;
+
+        grid.style.transition = "transform .6s ease";
+        grid.style.transform = `translateX(-${index * width}px)`;
+
+        if (index === cards.length) {
+
+            setTimeout(() => {
+                grid.style.transition = "none";
+                grid.style.transform = "translateX(0)";
+                index = 0;
+            }, 600);
+
+        }
+
+    }
+
+    setInterval(slideTestimonials, 2500);
+
+}

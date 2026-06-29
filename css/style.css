@@ -856,24 +856,29 @@ Testimonials
     background:#170d22;
 }
 
+.testimonial-wrapper{
+    overflow: hidden;
+    width: 100%;
+}
+
 .testimonial-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
+    display: flex;
+    gap: 35px;
+    transition: transform .4s ease;
 }
 
 .testimonial-card{
-    background:rgba(255,255,255,.05);
-    backdrop-filter:blur(15px);
-    border-radius:25px;
-    padding:35px;
-    text-align:center;
-    transition:.4s;
+    flex: 0 0 calc((100% - 50px)/3);
+    text-align: center;
+    padding: 5px;
 }
+
+
 
 .testimonial-card:hover{
     transform:translateY(-10px);
     box-shadow:0 20px 45px rgba(212,175,55,.20);
+    border-radius: 10px;
 }
 
 .testimonial-card img{

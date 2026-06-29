@@ -132,23 +132,24 @@
         font-size: 16px;
     }
 
-    .hero-right{
-    width:100%;
-    display:flex;
-    justify-content:center;
-}
+    .hero-right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 
-.hero-image{
-    width:90%;
-    max-width:320px;
-    height:auto;
-}
+    .hero-image {
+        width: 90%;
+        max-width: 320px;
+        height: auto;
+    }
 
-.hero-image img{
-    width:100%;
-    height:auto;
-    object-fit:cover;
-}
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
     .hero-btns {
         flex-direction: column;
         gap: 15px;
@@ -197,6 +198,14 @@
     .footer-grid {
         gap: 40px;
     }
+
+
+    .testimonial-card {
+        flex: 0 0 100%;
+    }
+
+
+
 
     .whatsapp {
         width: 50px;
@@ -324,310 +333,310 @@
 }
 
 /* About Page */
-@media (max-width:992px){
+@media (max-width:992px) {
 
-.about-page{
-    grid-template-columns:1fr;
-    gap:40px;
-    text-align:center;
-}
+    .about-page {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
 
-.about-image img{
-    max-width:500px;
-    margin:auto;
-}
+    .about-image img {
+        max-width: 500px;
+        margin: auto;
+    }
 
-.mission-grid{
-    grid-template-columns:1fr;
-}
+    .mission-grid {
+        grid-template-columns: 1fr;
+    }
 
-.team-grid{
-    grid-template-columns:repeat(2,1fr);
-}
-
-}
-
-@media (max-width:768px){
-
-.team-grid{
-    grid-template-columns:1fr;
-}
-
-.team-card img{
-    height:300px;
-}
-
-.page-banner{
-    padding:140px 20px 70px;
-}
-
-.page-banner h1{
-    font-size:42px;
-}
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
 }
 
-@media (max-width:480px){
+@media (max-width:768px) {
 
-.about-content h2{
-    font-size:30px;
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-card img {
+        height: 300px;
+    }
+
+    .page-banner {
+        padding: 140px 20px 70px;
+    }
+
+    .page-banner h1 {
+        font-size: 42px;
+    }
+
 }
 
-.team-card img{
-    height:260px;
-}
+@media (max-width:480px) {
 
-.mission-box{
-    padding:30px 20px;
-}
+    .about-content h2 {
+        font-size: 30px;
+    }
+
+    .team-card img {
+        height: 260px;
+    }
+
+    .mission-box {
+        padding: 30px 20px;
+    }
 
 }
 
 /* Tablet */
-@media (max-width:992px){
+@media (max-width:992px) {
 
-.hero{
-    flex-direction:column;
-    text-align:center;
-    gap:50px;
-}
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
 
-.hero-left,
-.hero-right{
-    width:100%;
-}
+    .hero-left,
+    .hero-right {
+        width: 100%;
+    }
 
-.hero-right{
-    order:-1;
-}
+    .hero-right {
+        order: -1;
+    }
 
-.hero-image{
-    width:360px;
-    height:470px;
-}
+    .hero-image {
+        width: 360px;
+        height: 470px;
+    }
 
-.hero-buttons{
-    justify-content:center;
-    flex-wrap:wrap;
-}
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 
-.hero-rating{
-    justify-content:center;
-}
+    .hero-rating {
+        justify-content: center;
+    }
 
-.about-preview{
-    grid-template-columns:1fr;
-    text-align:center;
-}
+    .about-preview {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
 
-.about-image img{
-    max-width:500px;
-    margin:auto;
-}
+    .about-image img {
+        max-width: 500px;
+        margin: auto;
+    }
 
-.stats-container{
-    grid-template-columns:repeat(2,1fr);
-}
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-.service-grid{
-    grid-template-columns:repeat(2,1fr);
-}
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-.choose-grid{
-    grid-template-columns:repeat(2,1fr);
-}
+    .choose-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-.course-grid{
-    grid-template-columns:repeat(2,1fr);
-}
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-.testimonial-grid{
-    grid-template-columns:1fr;
-}
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
 
-.contact-grid{
-    grid-template-columns:1fr;
-}
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
 
-.contact-preview{
-    text-align:center;
-}
+    .contact-preview {
+        text-align: center;
+    }
 
-.footer-grid{
-    grid-template-columns:1fr;
-    text-align:center;
-}
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
 
-.social-icons{
-    justify-content:center;
-}
+    .social-icons {
+        justify-content: center;
+    }
 
-.appointment-container{
-    flex-direction:column;
-    text-align:center;
-    gap:30px;
-}
+    .appointment-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
 
 }
 
 /* Mobile */
-@media (max-width:768px){
+@media (max-width:768px) {
 
-.hero{
-    padding:130px 20px 50px;
-}
+    .hero {
+        padding: 130px 20px 50px;
+    }
 
-.hero h1{
-    font-size:42px;
-}
+    .hero h1 {
+        font-size: 42px;
+    }
 
-.hero p{
-    font-size:16px;
-}
+    .hero p {
+        font-size: 16px;
+    }
 
-.hero-image{
-    width:280px;
-    height:380px;
-}
+    .hero-image {
+        width: 280px;
+        height: 380px;
+    }
 
-.hero-buttons{
-    flex-direction:column;
-    gap:15px;
-}
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
 
-.hero-buttons .btn,
-.hero-buttons .btn-outline{
-    width:100%;
-    text-align:center;
-    margin-left:0;
-}
+    .hero-buttons .btn,
+    .hero-buttons .btn-outline {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+    }
 
-.hero-rating{
-    flex-direction:column;
-    gap:10px;
-}
+    .hero-rating {
+        flex-direction: column;
+        gap: 10px;
+    }
 
-.stats-container,
-.service-grid,
-.choose-grid,
-.course-grid{
-    grid-template-columns:1fr;
-}
+    .stats-container,
+    .service-grid,
+    .choose-grid,
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
 
-.about-content h2,
-.section-title h2,
-.appointment-content h2{
-    font-size:34px;
-}
+    .about-content h2,
+    .section-title h2,
+    .appointment-content h2 {
+        font-size: 34px;
+    }
 
-.contact-grid iframe{
-    height:300px;
-}
+    .contact-grid iframe {
+        height: 300px;
+    }
 
-.booking-box{
-    width:95%;
-    padding:25px;
-}
+    .booking-box {
+        width: 95%;
+        padding: 25px;
+    }
 
 }
 
 /* Small Mobile */
-@media (max-width:480px){
+@media (max-width:480px) {
 
-.hero{
-    padding-top:120px;
+    .hero {
+        padding-top: 120px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-tag {
+        font-size: 13px;
+    }
+
+    .hero-image {
+        width: 230px;
+        height: 320px;
+    }
+
+    .logo h2 {
+        font-size: 24px;
+    }
+
+    .logo span {
+        font-size: 10px;
+    }
+
+    .page-banner h1 {
+        font-size: 32px;
+    }
+
+    .section-title h2,
+    .about-content h2,
+    .appointment-content h2 {
+        font-size: 28px;
+    }
+
+    .stat-box {
+        padding: 25px;
+    }
+
+    .stat-box h2 {
+        font-size: 34px;
+    }
+
+    .service-card img {
+        height: 220px;
+    }
+
+    .course-card {
+        padding: 25px;
+    }
+
+    .testimonial-card {
+        padding: 25px;
+    }
+
+    .testimonial-card img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .contact-grid iframe {
+        height: 250px;
+    }
+
+    .booking-box {
+        padding: 20px;
+    }
+
+    .booking-box h2 {
+        font-size: 24px;
+    }
+
+    .whatsapp,
+    .scroll-top {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+
 }
 
-.hero h1{
-    font-size:32px;
-}
+@media(max-width:992px) {
 
-.hero-tag{
-    font-size:13px;
-}
+    .navbar>.btn {
+        display: none;
+    }
 
-.hero-image{
-    width:230px;
-    height:320px;
-}
-
-.logo h2{
-    font-size:24px;
-}
-
-.logo span{
-    font-size:10px;
-}
-
-.page-banner h1{
-    font-size:32px;
-}
-
-.section-title h2,
-.about-content h2,
-.appointment-content h2{
-    font-size:28px;
-}
-
-.stat-box{
-    padding:25px;
-}
-
-.stat-box h2{
-    font-size:34px;
-}
-
-.service-card img{
-    height:220px;
-}
-
-.course-card{
-    padding:25px;
-}
-
-.testimonial-card{
-    padding:25px;
-}
-
-.testimonial-card img{
-    width:70px;
-    height:70px;
-}
-
-.contact-grid iframe{
-    height:250px;
-}
-
-.booking-box{
-    padding:20px;
-}
-
-.booking-box h2{
-    font-size:24px;
-}
-
-.whatsapp,
-.scroll-top{
-    width:45px;
-    height:45px;
-    font-size:20px;
-}
-
-}
-
-@media(max-width:992px){
-
-.navbar > .btn{
-    display:none;
-}
-
-.hero-buttons .btn,
-.hero-buttons .btn-outline,
-.appointment .btn,
-.course-card .btn,
-.service-card .btn,
-.contact-form .btn{
-    display:inline-block;
-}
+    .hero-buttons .btn,
+    .hero-buttons .btn-outline,
+    .appointment .btn,
+    .course-card .btn,
+    .service-card .btn,
+    .contact-form .btn {
+        display: inline-block;
+    }
 
 }
