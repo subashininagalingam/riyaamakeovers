@@ -640,3 +640,26 @@
     }
 
 }
+
+/* SERVICES */
+
+@media(max-width:768px){
+
+.filter-buttons{
+    gap:10px;
+}
+
+.filter-btn{
+    padding:10px 18px;
+    font-size:14px;
+}
+
+.service-grid{
+    grid-template-columns:1fr;
+}
+
+.service-item img{
+    height:220px;
+}
+
+}

@@ -414,3 +414,11 @@ if (grid) {
     setInterval(slideTestimonials, 2500);
 
 }
+
+document.querySelectorAll(".btn").forEach(btn => {
+
+btn.addEventListener("click", function(e){
+    e.preventDefault();
+});
+
+});

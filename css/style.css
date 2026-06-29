@@ -2012,3 +2012,17 @@ height:450px;
 border:none;
 
 }
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color:#D4AF37;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #2a1142;
+}
