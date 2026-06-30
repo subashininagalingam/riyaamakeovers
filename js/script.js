@@ -226,8 +226,7 @@ link.classList.add("active");
 /*==============================
 Image Hover Zoom
 ==============================*/
-
-document.querySelectorAll(".gallery-grid img").forEach(img=>{
+document.querySelectorAll(".gallery-item img").forEach(img=>{
 
 img.addEventListener("mouseenter",()=>{
 
@@ -268,7 +267,7 @@ Booking Popup
 
 const bookingModal=document.getElementById("bookingModal");
 
-const bookingBtns=document.querySelectorAll(".btn");
+const bookingBtns = document.querySelectorAll(".book-btn");
 
 const closeModal=document.querySelector(".close-modal");
 
@@ -415,10 +414,8 @@ if (grid) {
 
 }
 
-document.querySelectorAll(".btn").forEach(btn => {
-
-btn.addEventListener("click", function(e){
-    e.preventDefault();
-});
-
+document.addEventListener("keydown", (e) => {
+    if(e.key === "Escape"){
+        lightbox.style.display = "none";
+    }
 });

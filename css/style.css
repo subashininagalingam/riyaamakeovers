@@ -9,6 +9,13 @@ Google Font
     scroll-behavior:smooth;
 }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
 body{
     font-family:'Poppins',sans-serif;
     background:#0f0618;
@@ -246,11 +253,15 @@ Premium Hero
 
 .hero{
 
+width: 100%;
+
 min-height:100vh;
 
 display:flex;
 
 justify-content:space-between;
+
+grid-template-columns: 1fr 1fr;
 
 align-items:center;
 
